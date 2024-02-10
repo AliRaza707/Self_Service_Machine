@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+        .mystyle
+        {
+            background-color: blue;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 100px;
+            width: 90px;
+            height: 70px;
+           
+        }
+        .mystyle2
+        {
+            background-color: rgb(143, 143, 148);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 100px;
+            width: 90px;
+            height: 70px;
+        
+        }
+        .col
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            border: 2px solid grey;
+
+        }
+        .container
+        {
+             margin-top: 1%;
+            border: 2px solid grey;
+        }
+        button:hover{
+            
+            font-weight: bolder;
+            text-shadow: 1px 1px 10px black;
+            box-shadow: 2px 10px 20px 1px rgba(0, 0, 0, 0.14);
+            border: 3px solid blue;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <center><h1 style=" text-decoration: underline;">JAZZ SELF SERVICE MACHINE</h1></center>
+    <center><button class="mystyle" id="help_button">HELP!</button></center>
+    <div class="container">
+        <div class="row">
+            <div class="col"><button class="mystyle" id="nine"> 9 </button></div>
+            <div class="col"><button class="mystyle" id="eight"> 8 </button></div>
+            <div class="col"><button class="mystyle" id="seven"> 7 </button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="mystyle" id="six"> 6 </button></div>
+            <div class="col"><button class="mystyle" id="five"> 5 </button></div>
+            <div class="col"><button class="mystyle" id="four"> 4 </button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="mystyle" id="three"> 3 </button></div>
+            <div class="col"><button class="mystyle" id="two"> 2 </button></div>
+            <div class="col"><button class="mystyle" id="one"> 1 </button></div>
+        </div>
+        <div class="row">
+            <div class="col"><a href="exitpg.html"><button class="mystyle2" id="hash"> # </button></a></div>
+            <div class="col"><button class="mystyle" id="zero"> 0 </button></div>
+            <div class="col"><a href="exitpg.html"><button class="mystyle2" id="asterick"> * </button></a></div>
+        </div>
+    </div>
+    <script>
+        var current_audio=null; //to check k pehly to koi audio nhi chl rha
+        var main_help=document.getElementById("help_button");
+        function help_player()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("main_rep.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        main_help.addEventListener("click",help_player);
+        
+//----------------------------------------------------------------------//
+        var nine_balance=document.getElementById("nine");
+        function balance_audio()
+        {   
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("9_balance.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        nine_balance.addEventListener("click",balance_audio);
+        
+//----------------------------------------------------------------------//
+        var eight_loan=document.getElementById("eight");
+        function loan_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("8_loan.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        eight_loan.addEventListener("click",loan_audio);
+        
+//----------------------------------------------------------------------//
+        
+        var seven_pkg=document.getElementById("seven");
+        function pkg_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("7_pakg.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        seven_pkg.addEventListener("click",pkg_audio);
+
+//----------------------------------------------------------------------//
+        
+        var six_mbs=document.getElementById("six");
+        function mbs_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("6_mbs.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        six_mbs.addEventListener("click",mbs_audio);
+//---------------------------------------------------------------------//  
+        var five_siminfo=document.getElementById("five");
+        function siminfo_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("5_siminfo.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        five_siminfo.addEventListener("click",siminfo_audio);
+//---------------------------------------------------------------------//  
+        var four_NoSims=document.getElementById("four");
+        function sims_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("4_NoSims.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        four_NoSims.addEventListener("click",sims_audio);
+        
+//---------------------------------------------------------------------//  
+var three_netsims=document.getElementById("three");
+        function netsims_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("3_netsims.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        three_netsims.addEventListener("click",netsims_audio);
+
+//---------------------------------------------------------------------//  
+var two_shikayat=document.getElementById("two");
+        function shikayat_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("2_shikayat.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        two_shikayat.addEventListener("click",shikayat_audio);
+
+//---------------------------------------------------------------------//  
+var one_avlblpkg=document.getElementById("one");
+        function avlblpkg_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("1_avlblpkg.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        one_avlblpkg.addEventListener("click",avlblpkg_audio);
+//---------------------------------------------------------------------//  
+var zero_rep=document.getElementById("zero");
+        function rep_audio()
+        {
+            if(current_audio)
+            {
+                current_audio.pause();
+            }
+            var audio=new Audio("0_rep.aac");
+            audio.play();
+            current_audio=audio;
+        }
+        zero_rep.addEventListener("click",rep_audio);
+    </script>
+</body>
+</html>
